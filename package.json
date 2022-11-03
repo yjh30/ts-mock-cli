@@ -9,9 +9,10 @@
   "scripts": {
     "mock": "ts-node ./bin/tsMock.ts --config ./example/config.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["mock", "json"],
+  "author": "yjh15167143670@163.com",
+  "homepage": "https://github.com/yjh30/ts-mock-cli",
+  "license": "MIT",
   "dependencies": {
     "json-schema-faker": "0.5.0-rcv.46",
     "typescript-json-schema": "^0.54.0"
