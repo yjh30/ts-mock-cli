@@ -21,6 +21,7 @@ const compilerOptions: TJS.CompilerOptions = {
 }
 
 export function mock(configFile: string) {
+  console.log(resolve(__dirname, configFile))
   const config: IConfig = require(resolve(__dirname, configFile)).default
   config.list.forEach(item => {
     mockItem(config.dist, item.file, item.typeNameList)

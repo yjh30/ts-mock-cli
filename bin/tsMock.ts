@@ -2,7 +2,7 @@
 
 import { program } from 'commander'
 import { version } from '../package.json'
-import { mock } from '../src'
+import { mock } from '..'
 
 program
   .version(`${version}`, '-v, --version', '当前版本')
