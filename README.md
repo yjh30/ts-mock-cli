@@ -20,12 +20,12 @@ Options:
 
 
 ## 2. 配置文件参考
-```ts
-import path from 'path'
+```js
+const path = require('path')
 
-const resolve = (dir:string) => path.resolve(__dirname, dir)
+const resolve = (dir) => path.resolve(__dirname, dir)
 
-export default {
+module.exports = {
   // 文件输出目录（绝对路径）
   dist: resolve('../example/schema-json'),
 
@@ -52,6 +52,7 @@ export default {
 ```
 
 ## 4、ts类型定义
+> [更多用法](https://github.com/YousefED/typescript-json-schema/blob/master/api.md)
 ```ts
 export interface IUser {
   /**
@@ -146,3 +147,5 @@ export interface IPagingResponseData {
   total: number
 }
 ```
+
+PS：如果你的ts文件中使用到了全局声明文件中的类型，可以使用[三斜线指令](https://www.tslang.cn/docs/handbook/triple-slash-directives.html)，这里有一个好处如果tsMock失败，说明ts全局声明文件存在问题，可以帮助我们发现问题

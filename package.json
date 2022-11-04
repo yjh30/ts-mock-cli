@@ -1,6 +1,6 @@
 {
   "name": "ts-mock-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "mock json data by typescript",
   "main": "index.ts",
   "bin": {

@@ -39,8 +39,8 @@ const compilerOptions = {
     strictNullChecks: true,
 };
 function mock(configFile) {
-    console.log((0, path_1.resolve)(__dirname, configFile));
-    const config = require((0, path_1.resolve)(__dirname, configFile)).default;
+    const module = require((0, path_1.resolve)(process.cwd(), configFile));
+    const config = module.default || module;
     config.list.forEach(item => {
         mockItem(config.dist, item.file, item.typeNameList);
     });
